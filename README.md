@@ -5,17 +5,16 @@
   node
   phantomjs
 # Install
-if using rvm cd into app directory 
-  gem install bundler
-  bundle
-  rake db:create
-  rake db:migrate
-  rake db:seeder
-  rails s
+if using rvm cd into app directory <br />
+  gem install bundler<br />
+  bundle<br />
+  rake db:create<br />
+  rake db:migrate<br />
+  rake db:seeder<br />
+  rails s<br />
 
 # Tests
   rake db:test:prepare
   rspec
-  
+
 # Heroku 
-  

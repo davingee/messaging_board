@@ -15,9 +15,10 @@ RSpec.describe "users flow", js: true do
     fill_in('Password confirmation', :with => '1foobar1')
     click_on('Create User')
     current_path.should == '/'
-
     ## create post
+    sleep 1
     click_link('New Message')
+    sleep 1
     fill_in('Post Title', :with => 'test title')
     fill_in('Body', :with => Faker::Lorem.paragraph(3))
     click_on('Create Post')
