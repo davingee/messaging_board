@@ -11,7 +11,7 @@
   rails s<br />
 
 # Tests
-  rake db:test:prepare
+  rake db:test:prepare<br />
   rspec
 
 # Heroku
