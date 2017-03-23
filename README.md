@@ -5,7 +5,7 @@
   node
   phantomjs
 # Install
-if using rvm cd into app directory <br />
+  if using rvm cd into app directory <br />
   gem install bundler<br />
   bundle<br />
   rake db:create<br />
@@ -17,4 +17,5 @@ if using rvm cd into app directory <br />
   rake db:test:prepare
   rspec
 
-# Heroku 
+# Heroku
+  https://guarded-ravine-77432.herokuapp.com/
