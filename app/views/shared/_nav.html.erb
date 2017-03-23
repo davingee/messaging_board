@@ -4,7 +4,7 @@
       <%= link_to "Message Board", root_path, class: "navbar-brand" %>
     </div>
     <ul class="navbar-nav nav">
-      <li><%= link_to "Messages", root_path %></li>
+      <li><%= link_to "Posts", root_path %></li>
       <% if user_signed_in? %>
         <li><%= link_to "Edit Profile", edit_user_registration_path %></li>
         <li><%= link_to "Sign Out", destroy_user_session_path, method: :delete %></li>
@@ -16,9 +16,9 @@
       <% end %>
     </ul>
     <% if user_signed_in? %>
-      <p><%= link_to "New Message", "#newPost", 'data-target' => "#newPost", "data-toggle" => "modal", class: 'navbar-text navbar-link navbar-right' %></p>
+      <p><%= link_to "New Post", "#newPost", 'data-target' => "#newPost", "data-toggle" => "modal", class: 'navbar-text navbar-link navbar-right' %></p>
     <% else %>
-      <p><%= link_to "New Message", new_post_path, class: 'navbar-text navbar-link navbar-right' %></p>
+      <p><%= link_to "New Post", new_post_path, class: 'navbar-text navbar-link navbar-right' %></p>
     <% end %>
   </div>
 </nav>
