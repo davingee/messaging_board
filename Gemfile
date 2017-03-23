@@ -24,9 +24,9 @@ gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
 
+
 gem 'bootstrap-sass'
 gem 'devise-bootstrap-views'
-
 gem 'devise'
 gem 'cancancan'
 gem 'simple_form'
@@ -35,20 +35,7 @@ gem 'kaminari'
 # Heroku dependency
 gem 'rails_12factor', group: :production
 
-
-# Use ActiveModel has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
-
-# Use Unicorn as the app server
-# gem 'unicorn'
-
-# Use Capistrano for deployment
-# gem 'capistrano-rails', group: :development
-# group :test do
-#   gem 'factory_girl'
-# end
-
-# these are for the seeder rake task and would not be used in production.
+# these are for the seeder rake task and would not be used in non demo production enviroment.
 gem 'factory_girl_rails'
 gem 'faker'
 
@@ -56,11 +43,11 @@ group :development, :test do
   gem 'rspec-rails'
   gem 'capybara'
   gem 'database_cleaner'
-  gem 'pry'
   gem 'selenium-webdriver'
   gem 'geckodriver-helper'
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
+  gem 'pry'
 end
 
 group :development do
