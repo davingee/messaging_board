@@ -1,10 +1,8 @@
-# messaging_board
-
 # Dependencies
   ruby 2.3.0<br />
 
 # Install
-  if using rvm cd into app directory <br />
+  cd into app directory<br />
   gem install bundler<br />
   bundle<br />
   rake db:create<br />
