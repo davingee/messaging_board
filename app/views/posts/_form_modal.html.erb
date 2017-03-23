@@ -1,0 +1,24 @@
+<div class="modal fade" id="newPost" tabindex="-1" role="dialog" aria-labelledby="newPost">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">New Post</h4>
+      </div>
+      <div class="modal-body">
+
+        <%= simple_form_for(Post.new) do |f| %>
+          <%= f.input :title, label: "Post Title" %>
+          <%= f.input :body %>
+          <div class="modal-footer">
+            <div>
+              <%= f.button :submit, :class => 'btn btn-small btn-success'%>
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        <% end %>
+
+      </div>
+    </div>
+  </div>
+</div>

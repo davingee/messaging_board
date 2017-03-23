@@ -1,0 +1,31 @@
+<div class="modal fade" id="signUp" tabindex="-1" role="dialog" aria-labelledby="signUp">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Sign Up</h4>
+      </div>
+      <div class="modal-body">
+
+        <%= simple_form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
+          <%= devise_error_messages! %>
+          <%= f.input :email, placeholder: 'user@domain.com', :autofocus => true %>
+          <%= f.input :first_name %>
+          <%= f.input :last_name %>
+          <%= f.input :password, hint: false, error_html: { id: 'password_error'} %>
+          <%= f.input :password_confirmation %>
+          <div class="modal-footer">
+            <div>
+              <%= f.button :submit, :class => 'btn btn-small btn-success'%>
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+            <%= link_to "Sign In", "#signIn", 'data-target' => "#signIn", "data-toggle" => "modal", 'data-dismiss' => "modal" %>
+            /
+            <%= link_to "Forgot Passoword", "#forgotPassword", 'data-target' => "#forgotPassword", "data-toggle" => "modal", 'data-dismiss' => "modal" %>
+          </div>
+        <% end %>
+
+      </div>
+    </div>
+  </div>
+</div>

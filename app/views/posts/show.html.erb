@@ -1,0 +1,32 @@
+<div class="col-md-8 col-md-offset-2">
+  <div class="post-show">
+
+    <h2><%= @post.title %></h2>
+
+    <p class="post-posted-by">
+      Posted by <%= @post.author.name %> <%= time_ago_in_words(@post.created_at) %> ago
+    </p>
+    <p class="post-desc">
+      <%= @post.body %>
+    </p>
+    <div class="links btn-group">
+      <% if can? :manage, @post %>
+        <%= link_to "Edit", edit_post_path(@post), class: "btn btn-default" %>
+        <%= link_to "Delete", post_path(@post), method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-danger" %>
+      <% end %>
+    </div>
+    
+  </div>
+  <div class="comments-show">
+    <h3 class="comment-section-header">Comments:</h3>
+
+    <p><%= render @comments.reverse %></p>
+    <%= paginate @comments %>
+
+    <h3 class="reply-to-msg">Reply to Message:</h3>
+
+    <%= render 'comments/new' %>
+
+  </div>
+</div>
+

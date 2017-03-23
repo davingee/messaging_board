@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>MessagingBoard</title>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+  </head>
+
+  <body>
+
+    <%= render '/shared/nav' %>
+
+    <div class="container">
+
+      <%= flash_messages %>
+      <%= yield %>
+
+    </div><!-- /container -->
+
+    <%= render '/shared/authentication_modals' %>
+
+    <%= render '/posts/form_modal' %>
+
+  </body>
+
+</html>

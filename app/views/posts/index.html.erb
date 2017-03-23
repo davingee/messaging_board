@@ -1,0 +1,14 @@
+<%= paginate @posts %>
+<% @posts.each do |post| %>
+  <div class="col-md-4">
+    <div class="post">
+      <h2 class="post-title">
+      <%= link_to post.title, post %>
+      </h2>
+      <span>Posted by: <%= post.author.name %></span>
+    </div>
+  </div>
+<% end %>
+<div class="col-md-12">
+  <%= paginate @posts %>
+</div>

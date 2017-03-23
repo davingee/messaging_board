@@ -1,0 +1,20 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  # For details on connection pooling, see rails configuration guide
+  # http://guides.rubyonrails.org/configuring.html#database-pooling
+  pool: 5
+
+development:
+  <<: *default
+  database: messaging_board_development
+
+test:
+  <<: *default
+  database: messaging_board_test
+
+production:
+  <<: *default
+  database: <%= ENV['DATABASE_URL'] %>
+  username: <%= ENV['M_DATABASE_USERNAME'] %>
+  password: <%= ENV['M_DATABASE_PASSWORD'] %>

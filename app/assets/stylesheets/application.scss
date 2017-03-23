@@ -1,0 +1,157 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+
+body {
+  background-color: #fff;
+  font-family: 'Playfair Display', serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Muli', sans-serif;
+  font-weight: 300;  
+}
+
+.btn:hover {
+  transition: 0.5s;
+  color: #383838;
+  background-color: #fff;
+}
+
+/* Navbar styles */
+
+.navbar {
+  font-family: 'Muli', sans-serif;
+  text-transform: uppercase;
+}
+
+.navbar-default {
+
+  padding-top: 5px;
+  padding-bottom: 5px;
+  background-color: #fff;
+
+  .navbar-nav > li > a {
+    color: #222;
+  }
+
+  .navbar-link {
+    color: #222;
+  }
+
+  .navbar-brand {
+    color: #222;
+    letter-spacing: 1.1px;
+  }
+
+}
+
+
+/* Links styles */
+
+.links {
+  margin-top: 20px;
+  .btn-default {
+    color: #0a8fd5;
+  }
+}
+
+/* posts styles */
+
+.post {
+  box-sizing: border-box;
+  background-color: #e4e4e4;
+  margin-bottom: 25px;
+  margin-right: 10px;
+  margin-left: 10px;
+  padding: 1.4em 1.4em;
+  height: 150px;
+  border-bottom: 2px solid #c0c1c1;
+  border-radius: 5px;
+
+  .post-title {
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 20px;
+  }
+
+}
+
+.post:nth-child(4n) {
+  clear: left;
+}
+
+/* post show-page styles */
+
+.post-show {
+  box-sizing: border-box;
+  background-color: #7b7777;
+  padding: 2.0em 1.5em;
+  color: #fff;
+  font-family: 'Muli', sans-serif;
+  font-weight: 300;
+  border-radius: 10px;
+
+  h2 {
+    margin-top: 0;
+  }
+  .post-posted-by{
+    color: #8d8d8e;
+  }
+  .post-desc {
+    font-size: 1.1em;
+    line-height: 1.75;
+    margin-bottom: 50px;
+  }
+
+  .post-posted-by {
+    color: #eee;
+    font-size: 0.9em;
+  }
+
+  .reply-to-msg {
+    margin-top: 50px;
+  }
+
+}
+
+
+/* Comment styles */
+.comments-show{
+
+  .comment {
+    box-sizing: border-box;
+    background-color: #efecec;
+    padding: 2.0em 1.5em;
+    border-bottom: 1px solid #0a8fd5;
+    font-family: 'Muli', sans-serif;
+    font-weight: 300;
+    border-bottom: 1px solid #fff;
+    padding-top: 15px;
+    padding-bottom: 15px;
+
+    .comment-content {
+      font-size: 1.25em;
+    }  
+    .comment-posted-by {
+      color: #b3a9a9;
+      font-size: 0.8em;
+    }
+
+  }
+}

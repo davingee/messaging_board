@@ -1,0 +1,5 @@
+<% unless user_signed_in? %>
+  <%= render "/shared/sign_in_modal" %>
+  <%= render "/shared/sign_up_modal" %>
+  <%= render "/shared/forgot_password_modal" %>
+<% end %>
